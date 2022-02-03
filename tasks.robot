@@ -13,6 +13,7 @@ Library           Collections
 Library           RPA.Archive
 Library           RPA.Dialogs
 Library           RPA.Robocorp.Vault
+Library           RPA.SAP
 ##Library         RPA.Excel.Files
 
 *** Tasks ***
@@ -52,7 +53,9 @@ Fill robot order form using csv
     Input Text When Element Is Visible    address    ${order}[Address]
     Preview robot
     Take a screenshot of robot    ${order}[Order number]
+    Disable Screenshots On Error
     Retry order 200 times to avoid errors
+    Enable Screenshots On Error
     Store receipt pdf    ${order}[Order number]
     Embed the screenshot into pdf    ${order}[Order number]
     Start another order
