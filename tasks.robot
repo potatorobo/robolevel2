@@ -12,6 +12,7 @@ Library           RPA.PDF
 Library           Collections
 Library           RPA.Archive
 Library           RPA.Dialogs
+Library           RPA.Robocorp.Vault
 ##Library         RPA.Excel.Files
 
 *** Tasks ***
@@ -111,3 +112,7 @@ Close opened pdfs
 
 Create zip file of results
     Archive Folder With Zip    output    ${OUTPUT_DIR}${/}results.zip    include=*pdf
+
+Get vault values
+    ${secret}=    Get Secret    MeaningOfLife
+    Log    ${secret}[MeaningOfLife]
