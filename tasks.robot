@@ -37,7 +37,7 @@ Click out of popup
 Fill robot order form
     Click out of popup
     Select From List By Value    css:#head    1
-    Select Radio Button    body    2
+    RPA.Browser.Selenium.Select Radio Button    body    2
     Input Text When Element Is Visible    css:input[type=number]    1
     Input Text When Element Is Visible    address    1
     Preview robot
@@ -48,7 +48,7 @@ Fill robot order form using csv
     [Arguments]    ${order}
     Click out of popup
     Select From List By Value    css:#head    ${order}[Head]
-    Select Radio Button    body    ${order}[Body]
+    RPA.Browser.Selenium.Select Radio Button    body    ${order}[Body]
     Input Text When Element Is Visible    css:input[type=number]    ${order}[Legs]
     Input Text When Element Is Visible    address    ${order}[Address]
     Preview robot
