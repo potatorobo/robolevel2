@@ -110,4 +110,4 @@ Close opened pdfs
     Close All Pdfs
 
 Create zip file of results
-    Archive Folder With Zip    output    results.zip    include=*pdf
+    Archive Folder With Zip    output    ${OUTPUT_DIR}${/}results.zip    include=*pdf
